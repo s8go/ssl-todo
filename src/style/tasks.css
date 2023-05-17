@@ -1,0 +1,54 @@
+.tasks{
+    flex-basis: 78%;
+    margin-top: 3em;
+}
+
+.tasks h1{
+    font-size: max(1.4em, 1.4vw);
+    text-align: center;
+}
+
+.task_container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em
+}
+
+.task_container > div{
+    background-color: rgb(173, 165, 237);
+    margin: .3em;
+    padding: .5em;
+    border-radius: .5em;
+    text-align: center;
+}
+
+.task_container  h5{
+    font-size: max(1.1em, 1.2vw);
+    color: rgb(80, 80, 80);
+}
+
+.task_container  p{
+    font-size: max(.9em, .9vw);
+}
+
+.task_container > div > div{
+display: flex;
+justify-content: space-between;
+align-items: start;
+font-size: max(.6em, .6vw);
+}
+.task_container .edit{
+color: rgb(91, 74, 244);
+cursor: pointer;
+}
+
+.task_container  .delete{
+color: rgb(255, 117, 117);
+cursor: pointer;
+}
+
+.task_container  .type{
+
+    color: rgb(91, 74, 244);
+}
+

@@ -1,0 +1,53 @@
+.profile-container {
+  position: relative;
+  flex: 15%;
+}
+
+.profile {
+  background-color: rgb(173, 165, 237);
+  padding: 0.5em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 100%;
+  display: block;
+  box-shadow: 5px 5px 15px rgb(106, 106, 106);
+}
+
+.profile h3{
+    font-size: max(1em,1vw);
+}
+
+ul{
+    list-style-type: none;
+}
+
+ul li{
+    margin-block: 2em;
+}
+
+li h5{
+    font-size: max(1em,1vw);
+    color: rgb(90, 90, 90);
+}
+
+li p{
+    font-size: max(.8em,.8vw);
+    cursor: pointer;
+    padding: 1em;
+    transition-duration: .5s;
+    display: flex;
+    justify-content: space-between;
+    border-radius: .5em;
+}
+
+li p:hover{
+    background-color: rgb(212, 201, 217);
+}
+
+@media screen and (min-width: 769px) {
+  .profile {
+    width: 20%;
+  }
+}
