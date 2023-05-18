@@ -1,13 +1,7 @@
 import React, { useState } from "react";
 
-const Addtask = ({ setNav, addNewTask }) => {
-  const [newTask, setNewTask] = useState({
-    id: Date.now() + "" + Math.random().toString(16),
-    title: "",
-    time: "",
-    completed: false,
-    details: "",
-  });
+const EditTask = ({ setNav, editTask, nav }) => {
+  const [newTask, setNewTask] = useState({ ...nav });
 
   function valueChange(e) {
     const name = e.name;
@@ -20,15 +14,15 @@ const Addtask = ({ setNav, addNewTask }) => {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          addNewTask(newTask);
+          editTask(newTask);
           setNav("tasks");
         }}
       >
-        <h3>Add Task</h3>
+        <h3>Edit Task</h3>
         <input
           type="text"
           required
-          placeholder="Task"
+          placeholder="Task title"
           name="title"
           value={newTask.title}
           onChange={(e) => valueChange(e.target)}
@@ -39,7 +33,20 @@ const Addtask = ({ setNav, addNewTask }) => {
           name="time"
           value={newTask.time}
           onChange={(e) => valueChange(e.target)}
-        />{" "}
+        />
+
+        <label htmlFor="completed">mark as completed? </label>
+        <input
+          type="checkbox"
+          name="completed"
+          id=""
+          onChange={(e) => {
+            newTask.completed = e.target.checked;
+            console.log(newTask);
+          }}
+          value={newTask.completed}
+        />
+
         <div className="btn_container">
           <button type="submit">Done</button>
           <button id="discard" type="button" onClick={() => setNav("tasks")}>
@@ -51,4 +58,4 @@ const Addtask = ({ setNav, addNewTask }) => {
   );
 };
 
-export default Addtask;
+export default EditTask;

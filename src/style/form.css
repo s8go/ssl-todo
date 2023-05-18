@@ -1,43 +1,49 @@
+.form_container {
+  flex-basis: 78%;
+  width: 100%;
+  margin-top: 3em;
+}
+
 form {
-    text-align: center;
-    margin: auto;
-    width: max(200px, 100%, 50vw);
-    margin-top: 3em;
+  text-align: center;
+  margin: auto;
+  width: min(100%, 500px);
+  margin-top: 3em;
 }
 
-textarea, input{
-    display: block;
-    font-size: max(.9em, 1vw);
-    margin: auto;
-    margin-block: .5em;
-    border-radius: .5em;
-    resize: none;
-    padding: .5em 2em;
-    width: 70%;
-    border: none;
+input {
+  display: block;
+  font-size: max(0.9em, 1vw);
+  margin: auto;
+  margin-block: 0.5em;
+  border-radius: 0.5em;
+  resize: none;
+  padding: 1em 2em;
+  width: 70%;
+  border: none;
 }
 
-textarea:focus, input:focus{
-    outline: 2px solid rgb(112, 107, 152);
+textarea:focus,
+input:focus {
+  outline: 2px solid rgb(112, 107, 152);
 }
 
-.btn_container{
-    display: flex;
-    justify-content: space-between;
-    padding: .5em;
+.btn_container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em;
 }
 
-button{
-    padding: .5em;
-    font-size: max(.8em, 1vw);
-    width: 22%;
-    background-color:rgb(173, 165, 237);
-    border-radius: .5em;
-    cursor: pointer;
-    border: none;
+button {
+  padding: 0.5em;
+  font-size: max(0.8em, 1vw);
+  width: 22%;
+  background-color: rgb(173, 165, 237);
+  border-radius: 0.5em;
+  cursor: pointer;
+  border: none;
 }
 
-#discard{
-    background-color: red;
+#discard {
+  background-color: red;
 }
-
