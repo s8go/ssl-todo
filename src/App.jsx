@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 function App() {
+  
   const tasks = useSelector((state) => state.allTasks);
   const completed = useSelector((state) => state.completed);
   const uncompleted = useSelector((state) => state.uncompleted);

@@ -36,7 +36,9 @@
 }
 
 .task_container p {
+
   font-size: max(0.9em, 0.9vw);
+  
 }
 
 .task_container > div > div {
